@@ -15,7 +15,7 @@ const Footer = () => {
                                 <Link
                                     key={item.title}
                                     href={item.url}
-                                    className="text-gray-500"
+                                    className="text-blue-500"
                                     target="_blank"
                                 >
                                     {item.title}
@@ -25,17 +25,17 @@ const Footer = () => {
                     ))}
                 </div>
             </div>
-            <div className="flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px px-6 py-10" >
+            <div className="flex justify-between items-center flex-wrap mt-5 border-t border-gray-100 sm:px px-6 py-10" >
                 <p>&copy; {new Date().getFullYear()} TipsPesa Systems. All Rights Reserved</p>
                 <div className="footer__copyrights-link">
                     <Link
                         href='/'
-                        className="text-gray-500"
+                        className="text-blue-500"
                     >Privacy Policy
                     </Link>
                     <Link
                         href='/'
-                        className="text-gray-500"
+                        className="text-blue-500"
                     >Terms of Use
                     </Link>
                 </div>

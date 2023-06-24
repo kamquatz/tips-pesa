@@ -44,7 +44,7 @@ const SearchTeam = ({ team, setTeam }: SearchTeamProps) => {
                   value={query}
                   className='search-manufacturer__option'
                 >
-                  Create '{query}'
+                  Create {query}
                 </Combobox.Option>
 
               ) : (
