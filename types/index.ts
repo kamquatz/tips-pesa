@@ -5,5 +5,9 @@ export interface CustomButtonProps{
     containerStyles?: string;
     handleClick?: MouseEventHandler<HTMLButtonElement>;
     btnType?: 'button' | 'submit' | 'reset';
+}
 
+export interface SearchTeamProps{
+    team: string;
+    setTeam: (team: string) => void;
 }

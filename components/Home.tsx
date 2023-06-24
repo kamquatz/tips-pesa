@@ -11,12 +11,10 @@ const Home = () => {
     return (
         <div className='hero'>
             <div className='flex-1 pt-12 padding-x'>
-                {/* <h1 className='hero__title'>
-                TipsPesa offers sure Soccer Prediction Matches Daily -- With over 95% Accuracy
-            </h1> */}
-                <p className='hero__subtitle'>
-                    Streamline your betting experience with our A.I analysed sure predictions
+                <p className='mt-5 text-gray-500'>
+                    Streamline your betting experience with our A.I analyzed sure predictions
                 </p>
+                <p className='text-right text-green-500'>+95% Win Rate</p>
 
                 <CustomButton
                     title="Subscribe to Premium"
@@ -24,15 +22,6 @@ const Home = () => {
                     handleClick={handleSubscription}
                 />
             </div>
-
-            <div className='hero__image-container'>
-                <div className='hero__image'>
-                    <Image src='/hero.png' alt='hero' fill className='object-contain' />
-                </div>
-                <div className='hero__image-overlay' />
-            </div>
-
-
         </div>
     )
 }
