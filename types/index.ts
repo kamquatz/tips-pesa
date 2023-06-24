@@ -11,3 +11,9 @@ export interface SearchTeamProps{
     team: string;
     setTeam: (team: string) => void;
 }
+
+export interface CustomFilterProps{
+    title: string;
+}
+
+
