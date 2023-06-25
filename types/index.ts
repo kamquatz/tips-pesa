@@ -8,6 +8,7 @@ export interface CustomButtonProps{
 }
 
 export interface SearchTeamProps{
+    matches: MatchProps[];
     team: string;
     setTeam: (team: string) => void;
 }

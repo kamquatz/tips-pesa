@@ -2,8 +2,14 @@
 
 import { useState } from "react";
 import { SearchTeam } from "."
+import { MatchProps } from "@/types";
 
-const SearchBar = () => {
+interface SearchBarProps {
+    matches: MatchProps[]
+}
+
+const SearchBar = ({ matches }: SearchBarProps) => {
+    const [{ kickoff_date, kickoff_time, home, away, prediction, odd, probability, result, status }] = matches;
     const [team, setTeam] = useState('');
 
     const handleSearch = () => {
@@ -14,6 +20,7 @@ const SearchBar = () => {
         <form className="searchbar" onSubmit={handleSearch}>
             <div className="searchbar__item">
                 <SearchTeam 
+                matches = {matches}
                 team={team}
                 setTeam={setTeam}
                 />

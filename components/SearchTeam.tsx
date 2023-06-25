@@ -3,23 +3,25 @@
 import { Fragment, useState } from 'react'
 import { Combobox, Transition } from '@headlessui/react'
 
-import { teams } from '@/constants'
 import { SearchTeamProps } from '@/types'
 
-const SearchTeam = ({ team, setTeam }: SearchTeamProps) => {
+const SearchTeam = ({ matches, team, setTeam }: SearchTeamProps) => {
   const [query, setQuery] = useState('')
 
   const filteredTeams =
     query === ''
-      ? teams
-      : teams.filter((team) => (
-        team.toLowerCase().replaceAll(/\s+/g, '')
+      ? matches
+      : matches.filter((match) => (
+        match.home.toLowerCase().replaceAll(/\s+/g, '')
           .includes(query.toLowerCase().replaceAll(/\s+/g, '')
-          )))
+          ) || match.away.toLowerCase().replaceAll(/\s+/g, '')
+            .includes(query.toLowerCase().replaceAll(/\s+/g, '')
+            )
+      ))
 
   return (
     <div className='search-manufacturer'>
-      <Combobox 
+      <Combobox
         value={team}
         onChange={setTeam}
       >
@@ -47,11 +49,11 @@ const SearchTeam = ({ team, setTeam }: SearchTeamProps) => {
                 </Combobox.Option>
 
               ) : (
-                filteredTeams.map((team => (
+                filteredTeams.map((match => (
                   <Combobox.Option
-                    key={team}
+                    key={match.home+match.away}
                     className={({ active }) => `relative search-manufacturer__option ${active ? 'bg-primary-blue text-white' : 'text-gray-900'}`}
-                    value={team}
+                    value={match.home+' vs '+match.away}
                   >
                     {({ selected, active }) => (
                       <>
@@ -59,7 +61,7 @@ const SearchTeam = ({ team, setTeam }: SearchTeamProps) => {
                           className={`block truncate ${selected ? 'font-medium' : 'font-normal'
                             }`}
                         >
-                          {team}
+                          {match.home+' vs '+match.away}
                         </span>
                         {selected ? (
                           <span
