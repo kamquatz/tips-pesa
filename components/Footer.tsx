@@ -15,7 +15,10 @@ const Footer = () => {
                             width={32}
                             height={32}
                             className='object-contain'
-                        />Tips Pesa &copy;{new Date().getFullYear()}
+                        />
+                        Tips Pesa Systems &copy;{new Date().getFullYear()} <br />
+                        4th Flr Madonna House <br />
+                        Westlands, Nairobi
                     </Link>
                     {footerLinks.map((link) => (
                         <div key={link.title} className="footer__link">
