@@ -15,7 +15,11 @@ export default async function App() {
       <div className='mt-12 padding-x padding-y max-width' id='predictions'>
         <div className='home__text-container'>
           <h1 className='text-xl font-extrabold'>Our Predictions</h1>
-          <p>Explore our A.I Generated Predictions</p>
+          <p>Explore our Soccer Predictions</p>
+          <p className='text-gray-500 text-sm'>
+            Streamline your betting experience with our A.I analyzed sure predictions
+          </p>
+          <p className='text-right text-green-500'>+95% Win Rate</p>
         </div>
 
         <div className='home__filters'>
