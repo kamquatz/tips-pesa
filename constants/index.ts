@@ -55,14 +55,6 @@ export const footerLinks = [
         ],
     },
     {
-        title: "Company",
-        links: [
-            { title: "Events", url: "/" },
-            { title: "Blog", url: "/" },
-            { title: "Team", url: "/" }
-        ],
-    },
-    {
         title: "Patners",
         links: [
             { title: "Betika", url: "https://www.betika.com/en-ke/" },
