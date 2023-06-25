@@ -1,7 +1,6 @@
 
-export async function fetchMatches(){
-    const timestamp = Date.now();
-    const response = await fetch('https://tipspesa.xyz/get-matches?timestamp='+timestamp);
+export async function fetchMatches(matchDay?: string){    
+    const response = await fetch('https://tipspesa.xyz/get-matches?matchDay='+matchDay);
 
     const result = await response.json();
 

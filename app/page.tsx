@@ -3,11 +3,10 @@ import { fetchMatches } from '@/utils'
 import Image from 'next/image'
 
 export default async function App() {
-  const allMatches = await fetchMatches();
+  const matchDay = new Date().toISOString().split('T')[0];
+  const allMatches = await fetchMatches(matchDay);
 
   const isDataEmpty = !Array.isArray(allMatches) || allMatches.length < 1 || !allMatches;
-
-  //console.log(allMatches);
 
   return (
     <main className="overflow-hidden">
@@ -23,8 +22,8 @@ export default async function App() {
           <SearchBar />
 
           <div className='home__filters-container'>
-            <CustomFilter title='market' />
-            <CustomFilter title='day' />
+            {/* <CustomFilter title='market' />
+            <CustomFilter title='day' /> */}
           </div>
         </div>
 
