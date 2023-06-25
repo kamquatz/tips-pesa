@@ -61,7 +61,7 @@ const Subscription = ({ isOpen, closeModal }: SubscriptionProps) => {
                                     <div className="flex-1 flex flex-col gap-3">
                                         <div className="relative w-full h-40 bg-cover bg-center rounded-lg">
                                             <Image
-                                                src="/premium-membership.jpg"
+                                                src="/premium-membership.png"
                                                 alt="premium"
                                                 fill priority
                                                 className="object-contain"

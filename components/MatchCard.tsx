@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { MatchProps } from '@/types'
 
 interface MarchCardProps {
@@ -9,17 +8,19 @@ interface MarchCardProps {
 
 const MatchCard = ({ match }: MarchCardProps) => {
     const { kickoff_date, kickoff_time, home, away, prediction, odd, probability, result, status } = match;
+    const today = new Date().toISOString().split('T')[0];
+
     return (
         <div className='car-card group'>
             <div className='relative flex w-full'>
                 <div className='flex w-full justify-between text-gray'>
                     <div className='flex flex-col justify-center items-center gap-2'>
-                        <p className='text-[10px]'>
-                            {kickoff_date}
+                        <p className='text-[10px] font-semibold'>
+                            { today===kickoff_date ? 'Today' : kickoff_date}
                         </p>
                     </div>
                     <div className='flex flex-col justify-center items-center gap-2'>
-                        <p className='text-[10px]'>
+                        <p className='text-[10px] font-semibold'>
                             {kickoff_time}
                         </p>
                     </div>
