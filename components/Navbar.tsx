@@ -17,7 +17,7 @@ const Navbar = () =>{
                 />
             </Link>
 
-            <b className='flex justify-center items-center text-white'>
+            <b className='text-2xl font-extrabold flex justify-center items-center text-white'>
                 TIPS PESA
             </b>
         </nav>        

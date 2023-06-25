@@ -16,4 +16,17 @@ export interface CustomFilterProps{
     title: string;
 }
 
+export interface MatchProps{
+    sms_id?: number;
+    kickoff_date: string;
+    kickoff_time: string;
+    home: string;
+    away: string;
+    prediction: string;
+    odd?: number;
+    probability?: number;
+    result?: string;
+    status?: string;
+}
+
 

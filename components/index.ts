@@ -5,6 +5,7 @@ import Navbar from './Navbar'
 import SearchBar from './SearchBar' 
 import CustomFilter from './CustomFilter'
 import SearchTeam from './SearchTeam'
+import MatchCard from './MatchCard'
 
 export {
     Home,
@@ -13,5 +14,6 @@ export {
     Footer,
     SearchBar,
     CustomFilter,
-    SearchTeam
+    SearchTeam,
+    MatchCard
 }

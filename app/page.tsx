@@ -1,7 +1,14 @@
-import { CustomFilter, Home, SearchBar } from '@/components'
+import { CustomFilter, Home, MatchCard, SearchBar } from '@/components'
+import { fetchMatches } from '@/utils'
 import Image from 'next/image'
 
-export default function App() {
+export default async function App() {
+  const allMatches = await fetchMatches();
+
+  const isDataEmpty = !Array.isArray(allMatches) || allMatches.length < 1 || !allMatches;
+
+  //console.log(allMatches);
+
   return (
     <main className="overflow-hidden">
       <Home />
@@ -20,6 +27,27 @@ export default function App() {
             <CustomFilter title='day' />
           </div>
         </div>
+
+        {
+          !isDataEmpty ? (
+            <section>
+              <div className='home__cars-wrapper'>
+                {
+                  allMatches?.map((match) => (
+                    <MatchCard match={match} />
+                  ))
+                }
+
+              </div>
+            </section>
+          ) : (
+            <div className='home__error-container'>
+              <h2 className='text-black text-xl font-bold'>
+                Oops!!! No Matches Available
+              </h2>
+            </div>
+          )
+        }
       </div>
     </main>
   )
