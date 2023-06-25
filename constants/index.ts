@@ -21,7 +21,13 @@ export const markets = [
     { title: "Under 2.5", value: "UN2.5" },
     { title: "Under 3.5", value: "UN3.5" },
     { title: "Both Teams To Score", value: "GG" },
-    { title: "Both Teams Not To Score", value: "NG" },
+    { title: "Both Teams Not To Score", value: "NG" }
+];
+
+export const packages = [
+    { title: "Daily", duration: "1 Day", matches: 5, price:49 },
+    { title: "Weekly", duration: "7 Days", matches: 50, price:299 },
+    { title: "Monthly", duration: "30 Days", matches: 200, price:999 }
 ];
 
 export const fuels = [

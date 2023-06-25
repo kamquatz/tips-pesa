@@ -5,6 +5,9 @@ export interface CustomButtonProps{
     containerStyles?: string;
     handleClick?: MouseEventHandler<HTMLButtonElement>;
     btnType?: 'button' | 'submit' | 'reset';
+    textStyles?: string;
+    rightIcon?: string;
+    isDisabled?: boolean;
 }
 
 export interface SearchTeamProps{
@@ -28,6 +31,13 @@ export interface MatchProps{
     probability?: number;
     result?: string;
     status?: string;
+}
+
+export interface PackageProps {
+    title: string;
+    duration: string;
+    matches: number;
+    price: number
 }
 
 
