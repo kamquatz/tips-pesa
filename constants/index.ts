@@ -59,7 +59,15 @@ export const footerLinks = [
         links: [
             { title: "Events", url: "/" },
             { title: "Blog", url: "/" },
-            { title: "Contact Us", url: "/" }
+            { title: "Team", url: "/" }
+        ],
+    },
+    {
+        title: "Patners",
+        links: [
+            { title: "Betika", url: "https://www.betika.com/en-ke/" },
+            { title: "BetEnsured", url: "https://www.betensured.com/" },
+            { title: "FootyStats", url: "https://footystats.org/" }
         ],
     },
     {
@@ -69,7 +77,14 @@ export const footerLinks = [
             { title: "Facebook", url: "https://web.facebook.com/Tipspesa" },
             { title: "Instagram", url: "/" },
             { title: "Youtube", url: "https://www.youtube.com/@TipsPesa" },
-            { title: "Tiktok", url: "/" },
+            { title: "Tiktok", url: "/" }
+        ],
+    },    
+    {
+        title: "Contact Us",
+        links: [
+            { title: "Phone", url: "tel://+254723111920" },
+            { title: "Telegram", url: "https://t.me/+M13BUUVVC8gyNjA0" },
             { title: "Whatsapp", url: "https://wa.me/254759364933" }
         ],
     },
