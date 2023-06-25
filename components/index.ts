@@ -6,6 +6,8 @@ import SearchBar from './SearchBar'
 import CustomFilter from './CustomFilter'
 import SearchTeam from './SearchTeam'
 import MatchCard from './MatchCard'
+import Subscription from './Subscription'
+import PackageCard from './PackageCard'
 
 export {
     Home,
@@ -15,5 +17,7 @@ export {
     SearchBar,
     CustomFilter,
     SearchTeam,
-    MatchCard
+    MatchCard,
+    Subscription,
+    PackageCard
 }

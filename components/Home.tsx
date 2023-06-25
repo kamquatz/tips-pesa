@@ -1,12 +1,10 @@
 "use client"
 import Image from 'next/image'
 import CustomButton from './CustomButton'
+import { useState } from 'react';
 
 const Home = () => {
-    const handleSubscription = () => {
-
-    }
-
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div className='hero'>
@@ -15,13 +13,9 @@ const Home = () => {
                     Streamline your betting experience with our A.I analyzed sure predictions
                 </p>
                 <p className='text-right text-green-500'>+95% Win Rate</p>
-
-                <CustomButton
-                    title="Subscribe to Premium"
-                    containerStyles="bg-primary-blue text-white rounded-full mt-10"
-                    handleClick={handleSubscription}
-                />
             </div>
+
+            
         </div>
     )
 }
