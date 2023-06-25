@@ -3,7 +3,7 @@ import { fetchMatches } from '@/utils'
 import Image from 'next/image'
 
 export default async function App() {
-  const matchDay = new Date().toISOString().split('T')[0];
+  const matchDay = ''; // new Date().toISOString().split('T')[0];
   const allMatches = await fetchMatches(matchDay);
 
   const isDataEmpty = !Array.isArray(allMatches) || allMatches.length < 1 || !allMatches;

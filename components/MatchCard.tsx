@@ -37,20 +37,20 @@ const MatchCard = ({ match }: MarchCardProps) => {
             <div className='relative flex w-full mt-2'>
                 <div className='flex w-full justify-between text-gray'>
                     <div className='flex flex-col justify-center items-center gap-2'>
-                        <p className='text-[14px]'>
+                        <p className='text-[14px] font-semibold'>
                             {probability ? probability + '%' : ''}
                         </p>
                     </div>
 
                     <div className='flex flex-col justify-center items-center gap-2'>
-                        <p className='text-[14px] font-semibold'>
+                        <p className={`text-[14px] font-bold ${status === 'WON' ? 'text-green-500' : status === 'LOST' ? 'text-red-500' : ''}`}>
                             {result ? result + ' ' + status : ''}
                         </p>
                     </div>
 
 
                     <div className='flex flex-col justify-center items-center gap-2'>
-                        <p className='text-[14px]'>
+                        <p className='text-[14px] font-semibold'>
                             {odd ? 'x' + odd : ''}
                         </p>
                     </div>
