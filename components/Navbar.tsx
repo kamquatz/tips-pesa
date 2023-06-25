@@ -6,7 +6,7 @@ import CustomButton from './CustomButton'
 const Navbar = () =>{
   return (
     <header className='w-full z-10 fixed'>
-        <nav className='max-w-[1440px] mx-auto flex justify-between items-center sm:px-16 px-6 py-4 bg-blue-500'>
+        <nav className='mx-auto flex justify-between items-center sm:px-16 px-6 py-4 bg-blue-500'>
             <Link href='/' className='flex justify-center items-center'>
                 <Image 
                 src='/tipspesa.png' 
@@ -18,7 +18,7 @@ const Navbar = () =>{
             </Link>
 
             <b className='text-2xl font-extrabold flex justify-center items-center text-white'>
-                TIPS PESA
+                Tips Pesa
             </b>
         </nav>        
     </header>
