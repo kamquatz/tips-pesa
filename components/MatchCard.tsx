@@ -45,7 +45,7 @@ const MatchCard = ({ match }: MarchCardProps) => {
 
                     <div className='flex flex-col justify-center items-center gap-2'>
                         <p className={`text-[12px] font-bold ${status === 'WON' ? 'text-green-500' : status === 'LOST' ? 'text-red-500' : ''}`}>
-                            {result ? result + ' ' + status : ''}
+                            {result ? result + ' (' + status?.toLowerCase()+')' : ''}
                         </p>
                     </div>
 
