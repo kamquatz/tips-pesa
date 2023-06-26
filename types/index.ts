@@ -1,6 +1,6 @@
 import { MouseEventHandler } from "react";
 
-export interface CustomButtonProps{
+export interface CustomButtonProps {
     title: string;
     containerStyles?: string;
     handleClick?: MouseEventHandler<HTMLButtonElement>;
@@ -10,17 +10,29 @@ export interface CustomButtonProps{
     isDisabled?: boolean;
 }
 
-export interface SearchTeamProps{
+export interface SearchTeamProps {
     matches: MatchProps[];
     team: string;
     setTeam: (team: string) => void;
 }
 
-export interface CustomFilterProps{
+export interface OptionsProps {
     title: string;
+    value: string;
 }
 
-export interface MatchProps{
+export interface CustomFilterProps {
+    title: string;
+    options: OptionsProps[]
+}
+
+export interface FilterProps{
+    matchDay: string,
+    market: string,
+    limit: number
+}
+
+export interface MatchProps {
     sms_id?: number;
     kickoff_date: string;
     kickoff_time: string;
