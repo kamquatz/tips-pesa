@@ -6,7 +6,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import PackageCard from "./PackageCard";
 
 import { packages } from "@/constants";
-import { CustomButton } from ".";
+import { CustomButton, CustomFilter, CustomPackageFilter } from ".";
 
 interface SubscriptionProps {
     isOpen: boolean;
@@ -78,12 +78,18 @@ const Subscription = ({ isOpen, closeModal }: SubscriptionProps) => {
                                             }
                                         </div>
 
-                                        <div className="w-full py-5">
+                                        <div className='home__filters'>
+                                            <div className='home__filter-container w-full'>
+                                                <CustomPackageFilter title='packages' options={packages} />
+                                            </div>
+                                        </div>
+
+                                        <div className="w-full py-2 px-2">
                                             <CustomButton
                                                 title="Send M-Pesa STK Push"
                                                 containerStyles="bg-green-500 text-white rounded-full mt-10 w-full"
                                                 btnType='submit'
-                                               // handleClick={() => setIsOpen(true)}
+                                            // handleClick={() => setIsOpen(true)}
                                             />
                                         </div>
                                     </div>

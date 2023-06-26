@@ -57,3 +57,8 @@ export interface ShowMoreProps{
     isNext: boolean;
 }
 
+export interface CustomPackageFilterProps {
+    title: string;
+    options: PackageProps[]
+}
+
