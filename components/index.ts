@@ -8,6 +8,7 @@ import SearchTeam from './SearchTeam'
 import MatchCard from './MatchCard'
 import Subscription from './Subscription'
 import PackageCard from './PackageCard'
+import ShowMore from './ShowMore'
 
 export {
     Home,
@@ -19,5 +20,6 @@ export {
     SearchTeam,
     MatchCard,
     Subscription,
-    PackageCard
+    PackageCard,
+    ShowMore
 }

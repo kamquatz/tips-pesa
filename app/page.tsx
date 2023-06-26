@@ -1,14 +1,12 @@
-import { CustomFilter, Home, MatchCard, SearchBar } from '@/components'
+import { CustomFilter, Home, MatchCard, SearchBar, ShowMore } from '@/components'
 import { matchDays, markets } from '@/constants';
 import { fetchMatches } from '@/utils'
-import Image from 'next/image'
-import { useSearchParams } from 'next/navigation';
 
 export default async function App({ searchParams }: any) {
   const allMatches = await fetchMatches({
     matchDay: searchParams.matchDay || '',
     market: searchParams.market || '',
-    limit: searchParams.limit || 12
+    limit: searchParams.limit || 10
   });
 
   const isDataEmpty = !Array.isArray(allMatches) || allMatches.length < 1 || !allMatches;
@@ -48,8 +46,13 @@ export default async function App({ searchParams }: any) {
                     <MatchCard match={match} />
                   ))
                 }
-
               </div>
+
+              <ShowMore
+                pageNumber = {(searchParams.limit || 10) / 10}
+                isNext = {(searchParams.limit || 10) > allMatches.length}
+              />
+
             </section>
           ) : (
             <div className='home__error-container'>
