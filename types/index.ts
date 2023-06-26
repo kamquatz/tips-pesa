@@ -52,4 +52,8 @@ export interface PackageProps {
     price: number
 }
 
+export interface ShowMoreProps{
+    pageNumber: number;
+    isNext: boolean;
+}
 
