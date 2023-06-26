@@ -28,7 +28,7 @@ const SearchTeam = ({ matches, team, setTeam }: SearchTeamProps) => {
         <div className='relative w-full'>
           <Combobox.Input
             className='search-manufacturer__input'
-            placeholder='Search Team'
+            placeholder='Search Match'
             displayValue={(team: string) => team}
             onChange={(e) => setQuery(e.target.value)}
           />

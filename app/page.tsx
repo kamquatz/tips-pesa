@@ -1,10 +1,15 @@
 import { CustomFilter, Home, MatchCard, SearchBar } from '@/components'
+import { matchDays, markets } from '@/constants';
 import { fetchMatches } from '@/utils'
 import Image from 'next/image'
+import { useSearchParams } from 'next/navigation';
 
-export default async function App() {
-  const matchDay = '' // new Date().toISOString().split('T')[0];
-  const allMatches = await fetchMatches(matchDay);
+export default async function App({ searchParams }: any) {
+  const allMatches = await fetchMatches({
+    matchDay: searchParams.matchDay || '',
+    market: searchParams.market || '',
+    limit: searchParams.limit || 12
+  });
 
   const isDataEmpty = !Array.isArray(allMatches) || allMatches.length < 1 || !allMatches;
 
@@ -23,11 +28,14 @@ export default async function App() {
         </div>
 
         <div className='home__filters'>
-          <SearchBar matches={allMatches} />
+          {/* {!isDataEmpty ? (
+            <SearchBar matches={allMatches} />
+          ) : ''
+          } */}
 
-          <div className='home__filters-container'>
-            {/* <CustomFilter title='market' />
-            <CustomFilter title='day' /> */}
+          <div className='home__filter-container'>
+            <CustomFilter title='market' options={markets} />
+            <CustomFilter title='matchDay' options={matchDays} />
           </div>
         </div>
 
@@ -36,7 +44,7 @@ export default async function App() {
             <section>
               <div className='home__cars-wrapper'>
                 {
-                  allMatches?.map((match) => (
+                  allMatches.map((match) => (
                     <MatchCard match={match} />
                   ))
                 }
