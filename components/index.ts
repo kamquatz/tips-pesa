@@ -9,6 +9,7 @@ import MatchCard from './MatchCard'
 import Subscription from './Subscription'
 import PackageCard from './PackageCard'
 import ShowMore from './ShowMore'
+import CustomPackageFilter from './CustomPackageFilter'
 
 export {
     Home,
@@ -21,5 +22,6 @@ export {
     MatchCard,
     Subscription,
     PackageCard,
-    ShowMore
+    ShowMore,
+    CustomPackageFilter
 }
