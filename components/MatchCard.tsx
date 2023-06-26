@@ -1,5 +1,6 @@
 'use client'
 
+import { format, isToday, isTomorrow, isYesterday, subDays } from 'date-fns';
 import { MatchProps } from '@/types'
 
 interface MarchCardProps {
@@ -16,7 +17,10 @@ const MatchCard = ({ match }: MarchCardProps) => {
                 <div className='flex w-full justify-between text-gray'>
                     <div className='flex flex-col justify-center items-center gap-2'>
                         <p className='text-[10px] font-semibold'>
-                            { today===kickoff_date ? 'Today' : kickoff_date}
+                            {isToday(new Date(kickoff_date)) ? 'Today' 
+                            : isYesterday(new Date(kickoff_date)) ? 'Yesterday'
+                            : isTomorrow(new Date(kickoff_date)) ? 'Tomorrow'
+                            : kickoff_date}
                         </p>
                     </div>
                     <div className='flex flex-col justify-center items-center gap-2'>
@@ -45,7 +49,7 @@ const MatchCard = ({ match }: MarchCardProps) => {
 
                     <div className='flex flex-col justify-center items-center gap-2'>
                         <p className={`text-[12px] font-bold ${status === 'WON' ? 'text-green-500' : status === 'LOST' ? 'text-red-500' : ''}`}>
-                            {result ? result + ' (' + status?.toLowerCase()+')' : ''}
+                            {result ? result + ' (' + status?.toLowerCase() + ')' : ''}
                         </p>
                     </div>
 
