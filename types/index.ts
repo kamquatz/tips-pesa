@@ -58,7 +58,7 @@ export interface ShowMoreProps{
 }
 
 export interface CustomPackageFilterProps {
-    title: string;
+    title: string
     options: PackageProps[]
 }
 

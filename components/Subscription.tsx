@@ -15,7 +15,7 @@ interface SubscriptionProps {
 
 const Subscription = ({ isOpen, closeModal }: SubscriptionProps) => {
     return (
-        <>
+        <form>
             <Transition appear show={isOpen} as={Fragment}>
                 <Dialog as='div' className='relative z-10' onClose={closeModal} >
                     <Transition.Child
@@ -79,15 +79,19 @@ const Subscription = ({ isOpen, closeModal }: SubscriptionProps) => {
                                         </div>
 
                                         <div className='home__filters'>
-                                            <div className='home__filter-container w-full'>
+                                            <div className='home__filter-container w-full px-10'>
                                                 <CustomPackageFilter title='packages' options={packages} />
                                             </div>
                                         </div>
+                                        <div className="input-type w-full px-10 py-2">
+                                            <input type="text" name="phone" className="border rounded-empty w-full h-8 text-center" placeholder="0712345678"/>
 
-                                        <div className="w-full py-2 px-2">
+                                        </div>
+
+                                        <div className="w-full py-2 px-10">
                                             <CustomButton
                                                 title="Send M-Pesa STK Push"
-                                                containerStyles="bg-green-500 text-white rounded-full mt-10 w-full"
+                                                containerStyles="bg-green-500 text-white rounded-full mt-5 w-full"
                                                 btnType='submit'
                                             // handleClick={() => setIsOpen(true)}
                                             />
@@ -103,7 +107,7 @@ const Subscription = ({ isOpen, closeModal }: SubscriptionProps) => {
 
                 </Dialog>
             </Transition>
-        </>
+        </form>
     )
 }
 
