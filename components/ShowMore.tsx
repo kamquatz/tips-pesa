@@ -9,7 +9,7 @@ const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
     const router = useRouter()
 
     const handleNavigation = () => {
-        const newLimit = (pageNumber + 1) * 10
+        const newLimit = (pageNumber + 1) * 12
         const newPathName = updateSearchParams('limit', `${newLimit}`)
         router.push(newPathName)
     }

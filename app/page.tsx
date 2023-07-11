@@ -6,7 +6,7 @@ export default async function App({ searchParams }: any) {
   const allMatches = await fetchMatches({
     matchDay: searchParams.matchDay || '',
     market: searchParams.market || '',
-    limit: searchParams.limit || 10
+    limit: searchParams.limit || 12
   });
 
   const isDataEmpty = !Array.isArray(allMatches) || allMatches.length < 1 || !allMatches;
@@ -49,8 +49,8 @@ export default async function App({ searchParams }: any) {
               </div>
 
               <ShowMore
-                pageNumber = {(searchParams.limit || 10) / 10}
-                isNext = {(searchParams.limit || 10) > allMatches.length}
+                pageNumber = {(searchParams.limit || 12) / 12}
+                isNext = {(searchParams.limit || 12) > allMatches.length}
               />
 
             </section>
