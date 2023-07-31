@@ -6,7 +6,7 @@ export async function fetchMatches(filters: FilterProps){
 
     const guid = uuidv4().toString()
 
-    const response = await fetch(`https://tipspesa.xyz/get-matches?${guid}&limit=${limit}&matchDay=${matchDay}&market=${market}`)
+    const response = await fetch(`https://api.tipspesa.matrixsys.co.ke/get-matches?${guid}&limit=${limit}&matchDay=${matchDay}&market=${market}`)
 
     const result = await response.json()
 
