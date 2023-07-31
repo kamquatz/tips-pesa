@@ -29,7 +29,7 @@ export const markets = [
     // { title: "Under 1.5", value: "UN1.5" },
     // { title: "Under 2.5", value: "UN2.5" },
     // { title: "Under 3.5", value: "UN3.5" },
-    // { title: "Both Teams To Score", value: "GG" },
+     { title: "BTTS", value: "GG" },
     // { title: "Both Teams Not To Score", value: "NG" }
 ];
 
